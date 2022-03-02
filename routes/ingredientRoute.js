@@ -25,7 +25,9 @@ router.post(
 
 router.get('/all', async (req, res) => {
     const ingredient = await Ingredient.find({});
-    res.status(200).send(JSON.stringify(ingredient));
+    console.log('================')
+
+    res.status(200).send(ingredient);
 });
 
 export {router};

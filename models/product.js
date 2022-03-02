@@ -12,10 +12,7 @@ const productSchema = new Schema({
         type: String,
         required: true,
     },
-    ingredients: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Ingredient'
-    }]
+    ingredients: [{}]
 }, {timestamps: true});
 
 const Product = mongoose.model('Product', productSchema);
