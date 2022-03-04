@@ -2,7 +2,7 @@ import express from 'express';
 import 'dotenv/config';
 import mongoose from "mongoose";
 import { router as productRouter} from "./routes/productRoute.js";
-import { router as ingredientRoute} from "./routes/ingredientRoute.js";
+import { router as orderRouter} from "./routes/orderRoute.js";
 
 const port = process.env.PORT || 3000;
 const app = express();
@@ -15,12 +15,7 @@ mongoose
     .catch(reason => console.log(reason));
 
 app.use('/product', productRouter);
-app.use('/ingredient', ingredientRoute);
-
-app.post('/temp', (req, res)=> {
-    console.log(req.body)
-    res.status(200).send('sssss')
-})
+app.use('/order', orderRouter);
 
 app.listen(port, () => {
     console.log(`Server started on http://localhost:${port}`)

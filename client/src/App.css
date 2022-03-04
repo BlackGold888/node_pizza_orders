@@ -1,7 +1,18 @@
 .container {
   height: 100vh;
-  background-color: grey;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+}
+
+.ingredient{
+  display: flex;
+}
+
+.products_container{
+  display: flex;
+}
+.products_container a {
+  margin: 10px;
 }
