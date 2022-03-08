@@ -19,9 +19,5 @@ router.post(
         }
     });
 
-router.get('/save', async (req, res) => {
-    res.status(200).send();
-});
-
 export {router};
 
