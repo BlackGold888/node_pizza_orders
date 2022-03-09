@@ -10,7 +10,6 @@ class Show extends Component {
     }
 
     async componentDidMount() {
-        console.log(this.props.match.params.id)
         const response = await fetch(`/product/show?id=${this.props.match.params.id}`);
         const data = await response.text();
         this.setState((state, props) => {

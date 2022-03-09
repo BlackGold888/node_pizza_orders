@@ -15,7 +15,6 @@ class Products extends Component {
                 items: JSON.parse(data)
             }
         });
-        console.log(this.state.items);
     }
 
     renderProducts () {
