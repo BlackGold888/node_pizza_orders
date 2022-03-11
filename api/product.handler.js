@@ -21,7 +21,7 @@ const saveProduct = async (req, res) => {
             name: req.body.name,
             ingredients
         })
-        res.status(200).send(product);
+      res.redirect('/');
     } catch (e) {
         console.log(e)
     }
